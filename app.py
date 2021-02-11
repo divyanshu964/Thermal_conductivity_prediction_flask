@@ -1,6 +1,10 @@
 from flask import Flask, render_template, redirect, request
 import joblib
 import numpy as np
+import logging
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 model= joblib.load('model.pkl')
 
