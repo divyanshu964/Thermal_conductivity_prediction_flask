@@ -29,6 +29,18 @@ def prediction():
     
     return render_template("index.html", tc= thermalcoefficient)
 
+@app.route('/howitworks.html')
+def hel():
+    return render_template("howitworks.html")
+
+@app.route('/contact.html')
+def hell():
+    return render_template("contact.html")
+
+@app.route('/index.html')
+def hl():
+    return render_template("index.html")
+
 
 if __name__=='__main__':
     #app.debug = True
