@@ -8,7 +8,7 @@ import sys
 model= joblib.load('model.pkl')
 
 #__name__ == __main__
-app= Flask(__name__)
+app= Flask(__name__,template_folder='templates')
 
 
 @app.route('/')
