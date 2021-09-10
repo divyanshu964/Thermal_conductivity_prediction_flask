@@ -11,3 +11,4 @@ scipy
 sklearn
 threadpoolctl==2.1.0
 Werkzeug==1.0.1
+logging
