@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, request
 import joblib
 import numpy as np
+import logging
+
 
 model= joblib.load('model.pkl')
 
@@ -32,6 +34,10 @@ def prediction():
 
 if __name__=='__main__':
     #app.debug = True
+    
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
+    
     app.run(debug = True)
     
     
